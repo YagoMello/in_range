@@ -93,7 +93,7 @@ private:
 } // namespace in_range_impl
 
 // Iterate from 0 to stop-1
-template <typename T = int32_t>
+template <typename T>
 in_range_impl::in_range_t<T> in_range(const T stop) {
     const T start = 0;
     const T step  = 1;
@@ -101,14 +101,14 @@ in_range_impl::in_range_t<T> in_range(const T stop) {
 }
 
 // Iterate from start to stop-1
-template <typename T = int32_t>
+template <typename T>
 in_range_impl::in_range_t<T> in_range(const T start, const T stop) {
     const T step = 1;
     return in_range_impl::in_range_t(start, stop, step);
 }
 
 // Iterate from start to stop-step
-template <typename T = int32_t>
+template <typename T>
 in_range_impl::in_range_t<T> in_range(const T start, const T stop, const T step) {
     return in_range_impl::in_range_t(start, stop, step);
 }

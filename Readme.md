@@ -8,7 +8,8 @@ For C++ programmers who like python's `for i in range(...):`
 `for i in range(start, stop, step):` => `for(auto i : in_range(start, stop, step))`
 
 ## `in_range<T>(...)`
-`T` defaults to `int32_t`, and can be anything that works as a number:
+`T` can be deduced from the args, if all types match.\
+`T` can be anything that works as a number:
 - ints
 - unsigned ints
 - float
@@ -40,6 +41,7 @@ Prints 0 1 2 3 4 5 6 7 8 9
 int main() {
   
   for(auto i : in_range(10)) {
+    // i is int
     std::cout << i << " ";
   }
   
@@ -54,6 +56,7 @@ Prints 0.4 0.2 -0 -0.2 -0.4 -0.6 -0.8
 
 int main() {
   
+  // <double> may be ommited because every arg is double
   for(double iter : in_range<double>(0.4, -0.9, -0.2)) {
     std::cout << iter << " ";
   }

@@ -16,7 +16,8 @@ For C++ programmers who like python's `for i in range(...):`
 - ...
 
 Technically, T requires:
-- Operators > and < (or operator <=>)
+- Operators `>` and `<` (or operator `<=>`)
+- Incrementable (operator `+=`) by `T` and by `1`
 - Initializable with 1 and 0 (`T t = 1`)
 - Copy constructible
 

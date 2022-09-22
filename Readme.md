@@ -1,5 +1,5 @@
 # in_range
-Header-only, C++ > 17\
+Header-only, C++ >= 17\
 For C++ programmers who like python's `for i in range(...):`
 
 ## Syntax
